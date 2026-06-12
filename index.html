@@ -8,7 +8,142 @@
       name="description"
       content="Web SPA for DAZ Goal 2026 Workshop: Telemedicine System, One Team, One Direction, One Growth with AI as a capability multiplier."
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260612-topic-cards" />
+    <style>
+      .customer-pain {
+        display: grid;
+        gap: clamp(1.4rem, 3vw, 2.4rem);
+      }
+
+      .customer-pain .center-copy,
+      .topic-section .center-copy {
+        margin-bottom: 0;
+      }
+
+      .topic-section {
+        display: grid;
+        gap: clamp(1.4rem, 3vw, 2.4rem);
+      }
+
+      .pain-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: clamp(1rem, 2vw, 1.35rem);
+        align-items: stretch;
+      }
+
+      .topic-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+        gap: clamp(1rem, 2vw, 1.35rem);
+        align-items: stretch;
+      }
+
+      .pain-card {
+        position: relative;
+        display: grid;
+        align-content: start;
+        gap: 0.75rem;
+        min-height: clamp(15rem, 19vw, 18.5rem);
+        padding: clamp(1.45rem, 2.3vw, 2.1rem);
+        border: 1px solid rgba(9, 32, 58, 0.1);
+        border-radius: 28px;
+        background:
+          radial-gradient(circle at 92% 88%, rgba(6, 88, 216, 0.08) 0 4.4rem, transparent 4.45rem),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.78));
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.8),
+          0 18px 52px rgba(8, 38, 63, 0.1);
+        overflow: hidden;
+        isolation: isolate;
+      }
+
+      .pain-card::after {
+        content: "";
+        position: absolute;
+        right: -1.9rem;
+        bottom: -1.9rem;
+        z-index: -1;
+        width: 7.4rem;
+        height: 7.4rem;
+        border-radius: 999px;
+        background: rgba(6, 88, 216, 0.07);
+      }
+
+      .pain-label {
+        display: block;
+        color: var(--blue);
+        font-size: clamp(0.78rem, 1.05vw, 0.9rem);
+        font-weight: 950;
+        letter-spacing: 0.18em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .pain-card h3 {
+        margin: 0;
+        color: var(--ink-soft);
+        font-size: clamp(1.28rem, 2vw, 1.78rem);
+        line-height: 1.14;
+        letter-spacing: -0.045em;
+      }
+
+      .pain-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: clamp(0.95rem, 1.22vw, 1.08rem);
+        font-weight: 800;
+        line-height: 1.55;
+      }
+
+      .pain-card ul {
+        display: grid;
+        gap: 0.5rem;
+        margin: 0;
+        padding: 0;
+        color: var(--muted);
+        font-size: clamp(0.95rem, 1.22vw, 1.08rem);
+        font-weight: 800;
+        line-height: 1.55;
+        list-style: none;
+      }
+
+      .pain-card li {
+        position: relative;
+        padding-left: 1rem;
+      }
+
+      .pain-card li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.72em;
+        width: 0.36rem;
+        height: 0.36rem;
+        border-radius: 999px;
+        background: var(--blue);
+      }
+
+      @media (max-width: 980px) {
+        .pain-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .pain-card {
+          min-height: 16rem;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .pain-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .pain-card {
+          min-height: auto;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="ambient ambient-one"></div>
@@ -21,6 +156,7 @@
       </a>
       <nav class="nav">
         <a href="#vision">Vision</a>
+        <a href="#customer-pain">Pain Point</a>
         <a href="#targets">Targets</a>
         <a href="#platform">Telemedicine</a>
         <a href="#ai">AI Multiplier</a>
@@ -82,6 +218,339 @@
               <span>Growth</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="section customer-pain" id="customer-pain">
+        <div class="center-copy reveal">
+          <p class="eyebrow">Customer Pain Point</p>
+          <h2>Customer Pain point</h2>
+          <p>
+            คลินิกกัญชาต้องทำงานภายใต้ข้อกำหนดด้านเอกสาร การสั่งจ่ายโดยแพทย์
+            การยืนยันตัวตน และการรายงานข้อมูลให้หน่วยงานที่เกี่ยวข้องอย่างครบถ้วน
+          </p>
+        </div>
+        <div class="pain-grid reveal delay-1">
+          <article class="pain-card">
+            <span class="pain-label">FORM</span>
+            <h3>เอกสาร ภท. 33</h3>
+            <p>กฎหมายในการขายกัญชาต้องมีเอกสารใบสั่งจ่ายกัญชา ภท. 33</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">DOCTOR</span>
+            <h3>สั่งจ่ายโดยแพทย์</h3>
+            <p>การจ่ายกัญชาต้องถูกสั่งจ่ายโดยแพทย์ เพื่อให้มีผู้รับผิดชอบทางการรักษาชัดเจน</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">LIMIT</span>
+            <h3>จำกัดปริมาณสั่งจ่าย</h3>
+            <p>จำกัดปริมาณในการสั่งจ่าย 1 กรัมต่อคน และครั้งละไม่เกิน 30 วัน</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">IDENTITY</span>
+            <h3>ยืนยันตัวตนคนไข้</h3>
+            <p>ต้องยืนยันตัวตนคนไข้เพื่อเป็นหลักฐานในการสั่งจ่าย เช่น รูปบัตรประชาชนหรือหนังสือเดินทาง</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">REPORT</span>
+            <h3>รายงานข้อมูลการสั่งจ่าย</h3>
+            <p>ต้องออกรายการในการสั่งจ่ายกัญชา เพื่อนำส่งข้อมูลให้หน่วยงานที่เกี่ยวข้อง</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section topic-section" id="solution">
+        <div class="center-copy reveal">
+          <p class="eyebrow">Solution</p>
+          <h2>Solution</h2>
+        </div>
+        <div class="topic-grid reveal delay-1">
+          <article class="pain-card">
+            <span class="pain-label">PRESCRIBE</span>
+            <h3>ออกใบสั่งจ่ายและ ภท. 33</h3>
+            <p>แพทย์สามารถออกใบสั่งจ่ายกัญชา และออกเอกสาร ภท. 33 ให้กับคนไข้</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">CONTROL</span>
+            <h3>จำกัดและแจ้งเตือน</h3>
+            <p>มีระบบจำกัดและแจ้งเตือนการจ่ายกัญชา ได้เฉพาะตามที่กฎหมายกำหนด</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">VERIFY</span>
+            <h3>บังคับยืนยันตัวตน</h3>
+            <p>บังคับให้คนไข้ยืนยันตัวตน ก่อนดำเนินการสั่งจ่ายกัญชา</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">SUMMARY</span>
+            <h3>รายงานสรุปการสั่งจ่าย</h3>
+            <p>คลินิกสามารถดูรายงานสรุปการสั่งจ่ายได้</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section topic-section" id="business-model">
+        <div class="center-copy reveal">
+          <p class="eyebrow">Business Model</p>
+          <h2>Business Model</h2>
+        </div>
+        <div class="topic-grid reveal delay-1">
+          <article class="pain-card">
+            <span class="pain-label">SAAS</span>
+            <h3>SaaS Clinic กัญชา</h3>
+            <p>Focus Area พัทยา, บุรีรัมย์</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">FOLLOW-UP</span>
+            <h3>ลูกค้าเดิมและ PO / TOR</h3>
+            <p>Follow-up ลูกค้าเดิม ติดตาม PO / TOR เทศบาลเมืองที, รพ.บุรีรัมย์, อบจ.เชียงราย, อบจ.ชลบุรี</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section topic-section" id="follow-up">
+        <div class="center-copy reveal">
+          <p class="eyebrow">Follow-up</p>
+          <h2>Follow-up</h2>
+        </div>
+        <div class="topic-grid reveal delay-1">
+          <article class="pain-card">
+            <span class="pain-label">A.RATCH</span>
+            <h3>คลินิก อ.รัช</h3>
+            <p>พัฒนาและส่งมอบระบบตามที่ลูกค้าต้องการ</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">DOCTOR</span>
+            <h3>หมอหมาด</h3>
+            <p>พัฒนาตามความต้องการลูกค้า เพื่อให้ใช้งานได้สะดวก</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">MEDWAND</span>
+            <h3>SaaS &amp; Medwand</h3>
+            <p>50 เครื่อง อบจ.เชียงราย</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section topic-section" id="channel">
+        <div class="center-copy reveal">
+          <p class="eyebrow">Channel</p>
+          <h2>Channel</h2>
+        </div>
+        <div class="topic-grid reveal delay-1">
+          <article class="pain-card">
+            <span class="pain-label">SALES</span>
+            <h3>2 Sales Focus Area</h3>
+            <p>พัทยา, บุรีรัมย์</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">AGENTS</span>
+            <h3>6 Agents Onboard</h3>
+            <p>ขยายช่องทางการขายผ่านตัวแทนที่พร้อมนำเสนอ solution</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">PARTNER</span>
+            <h3>Partner</h3>
+            <p>SAMART</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section topic-section" id="product">
+        <div class="center-copy reveal">
+          <p class="eyebrow">Product</p>
+          <h2>Product</h2>
+        </div>
+        <div class="topic-grid reveal delay-1">
+          <article class="pain-card">
+            <span class="pain-label">CLINIC</span>
+            <h3>SaaS Clinic</h3>
+            <p>ระบบสำหรับคลินิกที่ต้องการ workflow เฉพาะทาง</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">STANDARD</span>
+            <h3>SaaS Standard</h3>
+            <p>แพ็กเกจมาตรฐานสำหรับการใช้งาน telemedicine</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">IOMT</span>
+            <h3>Health Bag &amp; IoMT</h3>
+            <p>อุปกรณ์และข้อมูลสุขภาพเชื่อมต่อสำหรับการดูแลระยะไกล</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section topic-section" id="activity">
+        <div class="center-copy reveal">
+          <p class="eyebrow">Activity</p>
+          <h2>Activity</h2>
+        </div>
+        <div class="topic-grid reveal delay-1">
+          <article class="pain-card">
+            <span class="pain-label">VISIT</span>
+            <h3>Visit &amp; Focus Area</h3>
+            <p>ลงพื้นที่เป้าหมายเพื่อเปิดโอกาสและเก็บ requirement จริง</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">APPROACH</span>
+            <h3>Approach</h3>
+            <p>เข้าหากลุ่มลูกค้าและผู้มีอำนาจตัดสินใจด้วย use case ที่ชัดเจน</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">PILOT</span>
+            <h3>Demo / Pilot</h3>
+            <p>สาธิตระบบ ทดลองใช้ และแปลง feedback เป็นแผนปิดการขาย</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section topic-section" id="grouping-customer">
+        <div class="center-copy reveal">
+          <p class="eyebrow">Grouping Customer</p>
+          <h2>Grouping Customer</h2>
+        </div>
+        <div class="topic-grid reveal delay-1">
+          <article class="pain-card">
+            <span class="pain-label">GROUP A</span>
+            <h3>Priority Customer</h3>
+            <ul>
+              <li>คลินิก อ.รัช</li>
+              <li>CHG</li>
+              <li>อบจ.เชียงราย</li>
+              <li>เทศบาลเมืองที</li>
+              <li>รพ.บุรีรัมย์</li>
+            </ul>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">GROUP B</span>
+            <h3>Active Opportunity</h3>
+            <ul>
+              <li>อบต.แคนน้อย</li>
+              <li>อบจ.ชลบุรี</li>
+            </ul>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">GROUP C</span>
+            <h3>Pipeline Customer</h3>
+            <ul>
+              <li>รพ.พหลฯ</li>
+              <li>แฟซิฟิก การ์เดน</li>
+              <li>เซนแมรี โคราช</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section topic-section" id="revenue">
+        <div class="center-copy reveal">
+          <p class="eyebrow">Revenue</p>
+          <h2>Revenue</h2>
+        </div>
+        <div class="topic-grid reveal delay-1">
+          <article class="pain-card">
+            <span class="pain-label">2026</span>
+            <h3>0.75 / 32 MB</h3>
+            <ul>
+              <li>Actual: 0.75 MB</li>
+              <li>Target: 32 MB</li>
+              <li>Gap: 31.25 MB</li>
+              <li>Gap คิดเป็น 97.66% ของ target</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section topic-section" id="timeline">
+        <div class="center-copy reveal">
+          <p class="eyebrow">Timeline</p>
+          <h2>Timeline</h2>
+        </div>
+        <div class="topic-grid reveal delay-1">
+          <article class="pain-card">
+            <span class="pain-label">Q2</span>
+            <h3>มิ.ย.</h3>
+            <p>TOR เทศเมืองที สุรินทร์</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">Q3</span>
+            <h3>New Product Clinic</h3>
+            <p>ปิดยอดขาย New Product Clinic 2 แห่ง</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">Q3</span>
+            <h3>PO รพ.บุรีรัมย์</h3>
+            <p>ติดตามและปิด PO รพ.บุรีรัมย์</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">Q4</span>
+            <h3>อบจ.เชียงราย</h3>
+            <p>MA &amp; New Medwand อบจ.เชียงราย</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">Q4</span>
+            <h3>อบจ.ชลบุรี</h3>
+            <p>ติดตามโอกาสและแผนปิดการขาย อบจ.ชลบุรี</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section topic-section" id="winning-zone">
+        <div class="center-copy reveal">
+          <p class="eyebrow">Winning Zone</p>
+          <h2>Winning Zone</h2>
+        </div>
+        <div class="topic-grid reveal delay-1">
+          <article class="pain-card">
+            <span class="pain-label">LICENSE</span>
+            <h3>Telemedicine License</h3>
+            <p>จุดแข็งด้านความพร้อมของระบบและการให้บริการ telemedicine</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">PAYMENT</span>
+            <h3>Payment Gateway</h3>
+            <p>เชื่อมต่อการรับชำระเงินเพื่อให้ workflow คลินิกครบวงจร</p>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">CANNABIS</span>
+            <h3>Cannabis Model</h3>
+            <p>โมเดลเฉพาะสำหรับคลินิกกัญชาที่ตอบโจทย์ข้อกำหนดและการใช้งานจริง</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section topic-section" id="payment-term">
+        <div class="center-copy reveal">
+          <p class="eyebrow">Payment Term</p>
+          <h2>Payment Term</h2>
+        </div>
+        <div class="topic-grid reveal delay-1">
+          <article class="pain-card">
+            <span class="pain-label">SHORT TERM</span>
+            <h3>Short term</h3>
+            <ul>
+              <li>Rebalance 10k</li>
+              <li>Reborn 14k</li>
+              <li>New Model Saas Clinic Pay per used</li>
+            </ul>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">MIDDLE TERM</span>
+            <h3>Middle term</h3>
+            <ul>
+              <li>Cannabis</li>
+              <li>EP-IT</li>
+              <li>Four season</li>
+            </ul>
+          </article>
+          <article class="pain-card">
+            <span class="pain-label">LONG TERM</span>
+            <h3>Long term</h3>
+            <ul>
+              <li>อบจ.เชียงราย</li>
+              <li>อบจ.ชลบุรี</li>
+              <li>เทศบาลเมืองที</li>
+              <li>รพ.บุรีรัมย์</li>
+            </ul>
+          </article>
         </div>
       </section>
 
